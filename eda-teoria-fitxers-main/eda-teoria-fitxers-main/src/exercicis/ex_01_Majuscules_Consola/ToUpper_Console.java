@@ -18,12 +18,12 @@ public class ToUpper_Console {
         // vincular i obrir
         file = new File(filename);
         try {
-            BufferedReader entrada = new BufferedReader (new fileReader file)
+            BufferedReader entrada = new BufferedReader (new fileReader file);
             /* COMPLETAR */
 
         }
         catch (FileNotFoundException e) {
-            /* COMPLETAR */
+            System.out.print ("No s'ha trobat el fitxer");
             e.printStackTrace();
 
         }
@@ -32,15 +32,28 @@ public class ToUpper_Console {
         System.out.println();
         System.out.println("--------------------------------------------------");
         try {
+            do{
+                entrada = linia.readLine();
+                if (linia != null){
+                    if (linia == "")
+                        System.out.print("-------------------");
+                    else{
+                        System.out.print(linia);
+                        Sytem.out.print("=>");
+                        Sys0tem.out.print(linia.ToUpperCase());
+                    }
+                }
+                
+            } while (linia != null)
            /* COMPLETAR */
             // Versió amb un MENTRE (habitual)
-
-
-
            entrada.close();
         }
         catch (IOException e) {
            /* COMPLETAR */
+        System.out.print("S'ha acabat el fitxer");
+        e.printStackTrace();
+        System.exit(0);
 
         }
         System.out.println("--------------------------------------------------");
