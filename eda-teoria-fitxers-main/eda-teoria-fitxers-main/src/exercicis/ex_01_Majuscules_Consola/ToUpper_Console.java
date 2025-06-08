@@ -18,6 +18,7 @@ public class ToUpper_Console {
         // vincular i obrir
         file = new File(filename);
         try {
+            BufferedReader entrada = new BufferedReader (new fileSelection file)
             /* COMPLETAR */
 
         }
