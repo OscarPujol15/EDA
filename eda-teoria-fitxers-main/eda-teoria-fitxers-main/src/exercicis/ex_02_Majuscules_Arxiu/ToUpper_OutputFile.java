@@ -21,15 +21,43 @@ public class ToUpper_OutputFile {
         outputFile = new File(filename+"_UPPER.txt");
 
         /* COMPLETAR */
+        try {
+            entrada = new BufferedReader entrada (new fileReader (inputFile));
+            sortida = new BufferedWriter sortida (new fileWriter (outputFile));
+        }
+        catch(FileNotFoundException e){
+            System.out.print("Hi ha algun dels documents que no s'ha detectat correctament");
+            system.exit(0);
+        }
+        }
+        catch (IOException ex) {
+            System.err.println("Problemes amb algun dels arxius!");
+            ex.printStackTrace();
+            System.exit(0);
 
 
         // llegir en un i escriure en l'altre
         try {
+            do{
+                linia = entrada.readLine();
+
+                if (linia != null){
+                    sortida.write(linia.ToUpperCase());
+                    linia = entrada.readLine();
+                }
+                
+            }while (linia !=null);
+            
+        }          
            /* COMPLETAR */
         	sortida.close();
+            sortida.close();
         }
         catch (IOException ex) {
            /* COMPLETAR */
+            System.out.print("El fitxer ha finalitzat");
+            ex.printStackTrace();
+            System.exit (0);
 
         }
         System.out.println(">>>Arxiu processat. Resultat a " + outputFile.getName());
