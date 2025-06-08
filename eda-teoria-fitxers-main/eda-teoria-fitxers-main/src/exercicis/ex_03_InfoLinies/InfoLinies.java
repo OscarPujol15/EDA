@@ -33,7 +33,9 @@ public class InfoLinies {
 		while(linia!=null) {
 			mida = linia.length()-1;
 			suma += mida
+				System.out.println ("Linia: " + comptaLinies + " -->" + linia + "-->  Mida: " + mida) 
 			comptaLinies++;
+			linia = entrada.readLine();
 		}
 
 		mitjana = suma/comptaLinies;
@@ -44,6 +46,7 @@ public class InfoLinies {
 		if(comptaLinies==0) {
 			System.out.print("Amb zero línies no es pot calcular cap mitjana");
 		} else {
+			System.out.print ("La mitjana de totes les linies es de " + mitjana)
 
 		}
 	}
