@@ -21,11 +21,22 @@ public class InfoLinies {
 		fileChooser.showOpenDialog(null);
 		arxiu = fileChooser.getSelectedFile();
 
-        /* COMPLETE */
+        	try{
+			entrada = new BufferedReader(new fileReader (arxiu))
+		}
+		catch (IOException e){
+			System.out.print("L'arxiu no es correcte");
+			e.printStackTrace();
+			System.exit(0);
+		}
 		linia = entrada.readLine();
 		while(linia!=null) {
-
+			mida = linia.length()-1;
+			suma += mida
+			comptaLinies++;
 		}
+
+		mitjana = suma/comptaLinies;
 
 		System.out.format("L'arxiu %s té %d línies\n",
 				arxiu.getName(),
