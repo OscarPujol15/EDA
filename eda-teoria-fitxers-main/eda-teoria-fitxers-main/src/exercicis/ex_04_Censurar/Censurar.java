@@ -24,6 +24,7 @@ public class Censurar {
 			buw = new BufferedWriter(new FileWriter(arxiuSortida));
 		} catch(IOException e){
 			System.out.println("Problemes amb els canals!");
+			e.printStackTrace();
 			System.exit(1);
 		}
 		System.out.println("Línies censurades:");
@@ -34,8 +35,8 @@ public class Censurar {
 				buw.newLine();
 			} else{
 				System.out.format("%s%n", liniaLlegida);
+				liniaLlegida = bur.readLine();
 			}
-			liniaLlegida = bur.readLine();
 		}
 
 		bur.close();
