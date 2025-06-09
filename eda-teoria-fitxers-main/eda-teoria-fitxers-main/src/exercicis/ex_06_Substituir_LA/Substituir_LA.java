@@ -43,6 +43,10 @@ public class Substituir_LA {
         pos = versioMaj.indexOf("LA");
 
         /* COMPLETAR */
+        while (pos != -1) { 
+         sb = versioMaj.replac(pos, pos+2, "**");
+            versioMaj = 
+        }
 
         return sb.toString();
     }
